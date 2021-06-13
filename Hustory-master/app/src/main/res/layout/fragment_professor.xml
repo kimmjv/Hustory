@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/logo_main"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="30dp"
+
+        android:contentDescription="@string/todo"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo_main" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_sub1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fab_main"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="#ffffff"
+        android:src="@drawable/ic_menu_search"
+        android:visibility="invisible"
+        android:elevation="7dp"
+        app:borderWidth="0dp"
+        app:fabSize="normal" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/main_color"
+        android:elevation="7dp"
+        app:borderWidth="0dp"
+        app:fabSize="normal"
+        app:srcCompat="@drawable/booking" />
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo_main"
+        android:fontFamily="@font/jalnan"
+        android:gravity="center_horizontal"
+        android:text="@string/info"
+        android:textSize="16dp"
+        android:padding="15dp"
+        android:background="@color/main_color"
+        android:textColor="@color/white"/>
+
+
+    <ScrollView
+        android:id="@+id/ScrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/info">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="25dp"
+            android:layout_weight="1"
+            android:background="@drawable/round3_background"
+            android:elevation="5dp"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/icon_student"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginRight="15dp"
+                    android:contentDescription="@string/todo"
+                    app:srcCompat="@drawable/student"
+                    tools:srcCompat="@drawable/professor" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/name_student"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/jalnan"
+                        android:backgroundTint="@color/view_color"
+                        android:text="@string/test_name"
+                        android:hint="@string/name"
+                        android:textColor="@color/black"
+                        android:privateImeOptions="defaultInputmode=korean"
+                        android:singleLine="true"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/version_student"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:backgroundTint="@color/main_color"
+                        android:text="@string/professor"
+                        android:fontFamily="@font/jalnan"
+                        android:textColor="@color/black"
+                        android:textSize="12dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/agency"
+                    android:textSize="10sp"
+                    android:textColor="@color/grey"
+                    android:fontFamily="@font/jalnan" />
+
+                <EditText
+                    android:id="@+id/my_agency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/view_color"
+                    android:privateImeOptions="defaultInputmode=korean"
+                    android:singleLine="true"
+                    android:fontFamily="@font/jalnan"
+                    android:hint="@string/test_agency"
+                    android:text="@string/test_agency"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/view_color" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/department"
+                    android:textSize="10sp"
+                    android:textColor="@color/grey"
+                    android:fontFamily="@font/jalnan" />
+
+                <EditText
+                    android:id="@+id/my_department"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/jalnan"
+                    android:text="@string/test_department"
+                    android:hint="@string/department"
+                    android:textColor="@color/black"
+                    android:backgroundTint="@color/view_color"
+                    android:privateImeOptions="defaultInputmode=korean"
+                    android:singleLine="true"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/view_color" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/spot"
+                    android:textSize="10sp"
+                    android:textColor="@color/grey"
+                    android:fontFamily="@font/jalnan" />
+
+                <EditText
+                    android:id="@+id/my_spot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/jalnan"
+                    android:text="@string/test_spot"
+                    android:hint="@string/spot"
+                    android:textColor="@color/black"
+                    android:privateImeOptions="defaultInputmode=korean"
+                    android:singleLine="true"
+                    android:backgroundTint="@color/view_color"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/button_mentor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="30dp"
+
+                    android:background="@drawable/round2_background"
+                    android:elevation="7dp"
+                    android:fontFamily="@font/jalnan"
+                    android:padding="5dp"
+                    android:text="@string/mentor_student"
+
+                    android:textColor="@color/white"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/save"
+                    android:textSize="10dp"
+                    android:fontFamily="@font/jalnan"
+                    android:textColor="@color/grey"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/view_color" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/logout"
+                    android:textSize="10dp"
+                    android:fontFamily="@font/jalnan"
+                    android:textColor="@color/grey"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/view_color" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/drop"
+                    android:textSize="10dp"
+                    android:fontFamily="@font/jalnan"
+                    android:textColor="@color/grey"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

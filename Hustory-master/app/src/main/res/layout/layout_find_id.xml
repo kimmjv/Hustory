@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:layout_weight="0.6"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/logo_login"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/logo_login2"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.8">
+
+
+        <LinearLayout
+            android:id="@+id/login_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/find_nameETXT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="52dp"
+                android:layout_marginRight="52dp"
+                android:hint="@string/name"
+                android:textColor="@color/main_color"
+                android:fontFamily="@font/jalnan"
+                android:textSize="14sp"
+                android:padding="15dp"
+                android:privateImeOptions="defaultInputmode=korean"
+                android:singleLine="true"
+                android:background="@drawable/round8_background"/>
+
+            <EditText
+                android:id="@+id/find_phoneETXT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="52dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="52dp"
+
+                android:background="@drawable/round8_background"
+                android:fontFamily="@font/jalnan"
+                android:hint="@string/enter_phone"
+                android:padding="15dp"
+                android:inputType="phone"
+                android:singleLine="true"
+                android:textColor="@color/main_color"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/find_IdBTN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/round9_background"
+                android:elevation="10dp"
+                android:fontFamily="@font/jalnan"
+                android:padding="17dp"
+                android:text="@string/find_id"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/button_back"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_margin="40dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/cancel2"/>
+
+    </LinearLayout>
+
+</LinearLayout>

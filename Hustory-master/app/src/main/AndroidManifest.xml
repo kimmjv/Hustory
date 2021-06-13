@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kang.project">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Project">
+        <activity android:name=".question.AddQuestionActivity"></activity>
+        <activity android:name=".login.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="google.com"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".login.SignUpActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".question.AnswerActivity" />
+        <activity android:name=".login.FindPwActivity" />
+        <activity android:name=".login.FindIdActivity" />
+        <activity android:name=".MentorActivity" />
+    </application>
+
+</manifest>

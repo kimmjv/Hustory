@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/logo_main"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="30dp"
+
+        android:contentDescription="@string/todo"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo_main" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_sub1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fab_sub2"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="#ffffff"
+        android:src="@drawable/ic_menu_search"
+        android:visibility="invisible"
+        android:elevation="7dp"
+        app:borderWidth="0dp"
+        app:fabSize="normal" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_sub2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fab_main"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="#ffffff"
+        android:src="@drawable/ic_menu_my_calendar"
+        android:visibility="invisible"
+        android:elevation="7dp"
+        app:borderWidth="0dp"
+        app:fabSize="normal" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/main_color"
+        android:elevation="7dp"
+        app:borderWidth="0dp"
+        app:fabSize="normal"
+        app:srcCompat="@drawable/booking" />
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo_main"
+        android:fontFamily="@font/jalnan"
+        android:gravity="center_horizontal"
+        android:text="@string/question"
+        android:textSize="16dp"
+        android:padding="15dp"
+        android:background="@color/main_color"
+        android:textColor="@color/white"/>
+
+    <LinearLayout
+        android:id="@+id/sort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/question">
+
+        <TextView
+            android:id="@+id/new_orderTXT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/sort_new"
+            android:background="@drawable/round5_background"
+            android:textColor="@color/white"
+            android:gravity="center_horizontal"
+            android:elevation="3dp"
+            android:textSize="12dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:fontFamily="@font/jalnan"/>
+
+        <TextView
+            android:id="@+id/hot_orderTXT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/sort_inquiry"
+            android:background="@drawable/round6_background"
+            android:textColor="@color/main_color"
+            android:gravity="center_horizontal"
+            android:elevation="3dp"
+            android:textSize="12dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:fontFamily="@font/jalnan"/>
+
+        <TextView
+            android:id="@+id/my_orderTXT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/my_question"
+            android:background="@drawable/round6_background"
+            android:textColor="@color/main_color"
+            android:gravity="center_horizontal"
+            android:elevation="3dp"
+            android:textSize="12dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:fontFamily="@font/jalnan"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list_question"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@id/sort"
+        android:dividerHeight="0px"
+        android:divider="#FFFFFF"
+        android:background="#FAFAFA">
+
+    </ListView>
+
+</RelativeLayout>

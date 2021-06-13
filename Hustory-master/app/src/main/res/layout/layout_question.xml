@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/logo_main"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="30dp"
+
+        android:contentDescription="@string/todo"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo_main" />
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jalnan"
+        android:gravity="center_horizontal"
+        android:text="@string/question"
+        android:textSize="16dp"
+        android:padding="15dp"
+        android:background="@color/main_color"
+        android:textColor="@color/white"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="25dp"
+        android:background="@drawable/round3_background"
+        android:elevation="5dp"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/button_cancel"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_gravity="right"
+            android:onClick="onClick"
+            app:srcCompat="@drawable/cancel" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+
+            <EditText
+                android:id="@+id/q_titleETXT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxHeight="50dp"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/jalnan"
+                android:hint="@string/question_title"
+                android:privateImeOptions="defaultInputmode=korean"
+                android:singleLine="true"
+                android:backgroundTint="@color/view_color"/>
+
+        </ScrollView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/stroke_dialog"
+            android:padding="10dp"
+            android:layout_margin="5dp">
+
+            <EditText
+                android:id="@+id/q_contentETXT"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="top"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/jalnan"
+                android:privateImeOptions="defaultInputmode=korean"
+                android:hint="@string/question_content"
+                android:background="@null"/>
+
+        </ScrollView>
+
+        <Button
+            android:id="@+id/button_ok"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/round2_background"
+            android:elevation="2dp"
+            android:fontFamily="@font/jalnan"
+            android:onClick="onClick"
+            android:text="@string/enter"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
